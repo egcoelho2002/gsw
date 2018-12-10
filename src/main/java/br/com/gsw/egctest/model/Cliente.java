@@ -26,6 +26,23 @@ public class Cliente implements Serializable {
     @Column(name = "VALOR", nullable = false)
     private double valor;
 
+    public Cliente() {
+	
+    }
+    public Cliente(Long id) {
+    
+    }
+    public Cliente(String nome, double valor) {
+   	this.nome = nome;
+   	this.valor = valor;
+    }
+    
+    public Cliente(Long id, String nome, double valor) {
+	this.id = id;
+	this.nome = nome;
+	this.valor = valor;
+    }
+
     public Long getId() {
 	return id;
     }
